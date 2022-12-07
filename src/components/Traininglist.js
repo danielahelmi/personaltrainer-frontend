@@ -73,7 +73,6 @@ export default function Traininglist() {
 
     return (
         <div>
-            <h2>List of trainings</h2>
             <div className="ag-theme-material" style={{height: 600, margin: 'auto'}}>
             <AgGridReact
             rowData={trainings}

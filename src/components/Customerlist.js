@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { AgGridReact } from 'ag-grid-react';
 import 'ag-grid-community/styles/ag-grid.css';
 import 'ag-grid-community/styles/ag-theme-material.css';
+import Typography from '@mui/material/Typography';
 import { Button } from '@mui/material';
 import Snackbar from '@mui/material/Snackbar';
 import EditCustomer from './EditCustomer';
@@ -123,8 +124,7 @@ export default function Customerlist() {
        };
 
     return (
-        <div>
-            <h2>List of customers</h2>
+        <div margin={{top: 30}}>
             <AddCustomer saveCustomer={saveCustomer} />
             <div className="ag-theme-material" style={{height: 400, margin: '0 auto'}}>
             <AgGridReact rowData={customers} columnDefs={columns} gridOptions={gridOptions} />
